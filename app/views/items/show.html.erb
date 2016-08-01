@@ -1,0 +1,26 @@
+<div class='post'>
+  <div class="title">
+    <h3>Name:
+    <%= @item.name %></h3>
+  </div>
+
+  <div class="content">
+    <%= @item.price %>
+  </div>
+
+  <div class="content">
+    <%= @item.state %>
+  </div>
+
+  <div class="user">
+    <strong>Created by </strong>
+    <%= @item.user.present? ? @item.user.email : "an anonymous user" %>,
+    <%= time_ago_in_words(@item.created_at) %> ago
+  </div>
+</div>
+
+<hr>
+<%= link_to 'Edit', edit_item_path(@item), class: 'btn btn-default' %>
+<%= link_to 'Back', items_path, class: 'btn btn-default' %>
+
+

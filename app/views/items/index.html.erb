@@ -1,0 +1,35 @@
+<h2>Listing Items</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>Price</th>
+      <th>State</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td class="col-md-3 col-xs-6"><%= item.name %></td>
+        <td><%= item.user.present? ? item.user.email : "n/a" %>, <%= time_ago_in_words(item.created_at) %> ago</td>
+        <td class="col-md-3 col-xs-6"><%= item.price %></td>
+        <td class="col-md-3 col-xs-6"><%= item.state %></td>
+        <td>
+          <%= link_to icon('eye-open'), item %>&nbsp;
+          <% if user_signed_in? %>
+            <%= link_to icon('edit'), edit_item_path(item) if item.updatable_by? current_user %>&nbsp;
+            <%= link_to icon('trash'), item, method: :delete, data: { confirm: 'Are you sure?' } if item.deletable_by? current_user %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path, class:"btn btn-default"%>
