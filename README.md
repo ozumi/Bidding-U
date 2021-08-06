@@ -1,24 +1,11 @@
-# README
+# README #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 개발 개요 ###
 
-Things you may want to cover:
+본 프로젝트는 학부 수업 데이터베이스 과목 파이널 과제로 만든 웹 사이트입니다.
+경매 기반 중고거래 플랫폼으로 판매자가 물건을 올리면 구매를 희망하는 사람들이 Bidding을 통해 가격을 책정하는 방식입니다.
 
-* Ruby version
+* 개발 기간 : 2014.4 ~ 2014.6
+* 개발 인원 : 단독 개발
+* 사용 스택 : Ruby on Rails
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
