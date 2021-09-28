@@ -9,3 +9,5 @@
 * 개발 인원 : 단독 개발
 * 사용 스택 : Ruby on Rails
 
+## ERDiagram ##
+![image](https://user-images.githubusercontent.com/8486747/135141442-3f04eadd-000a-4eeb-91a2-0a341841fe77.png)
